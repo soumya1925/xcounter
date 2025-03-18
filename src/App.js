@@ -1,10 +1,12 @@
-import { Counter } from "./Counter";
+import Home from "./Home";
+import "./App.css"
 
 function App() {
   return (
-   <>
-   <Counter/>
-   </>
+
+    <div className="app">
+    <Home/>
+    </div>
   );
 }
 

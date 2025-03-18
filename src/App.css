@@ -1,0 +1,361 @@
+.app{
+ 
+    width: 100%;
+    height: 100vh;
+    background-color: #262726;
+    display: flex;
+    flex-direction: column;
+    color: white;
+   
+}
+.topContainer-contents{
+
+    width: 99%;
+    height: 300px;
+    background-color: #5e6161;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-radius: 10px;
+    margin: 5px;
+}
+.cards{
+   
+    width: 450px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #949798;
+}
+
+.chart-container{
+    width: 450px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    
+}
+
+
+
+.bottom-container{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.bottomContainer-transactions{
+
+    width: 60%;
+    height: 300px;
+    
+}
+
+.bottomContainer-topExpenses{
+
+    width: 40%;
+    height: 300px;
+    
+    
+}
+
+.cards button{
+   
+    color: white; /* Text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.inc-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.1); /* Light transparent overlay */
+    backdrop-filter: blur(1px); /* Slight blur effect for depth */
+    -webkit-backdrop-filter: blur(1px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+/* Transparent Silvery Modal */
+.inc-modal {
+    background: rgba(196, 191, 191, 0.793); /* Light Silver transparency */
+    backdrop-filter: blur(12px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(12px);
+    color: black; /* Ensure text remains readable */
+    padding: 20px;
+    border-radius: 12px;
+    width: 500px;
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(211, 211, 211, 0.2); /* Soft silver shadow */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle white border */
+}
+
+.modal-contents{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-around;
+    align-items: center;
+   
+}
+.bal{
+
+    background-color: #f39c12 ;
+    height: 40px;
+    margin-right: 15px; 
+    width: 120px;
+    border: none;
+    border-radius:10px;
+    color: white;
+    box-shadow: 0px 2px 5px rgba(47, 46, 46, 0.807);
+}
+.canc{
+
+    height: 40px;
+    background-color: #d7dbdd ;
+    width: 120px;
+    border: none;
+   
+    border-radius:10px;
+    box-shadow: 0px 2px 5px rgba(47, 46, 46, 0.807);
+}
+.incInp{
+    text-align: center;
+    height: 40px;
+    margin-right: 15px; 
+    border: none;
+    border-radius:10px; 
+    box-shadow: 0px 2px 5px rgba(47, 46, 46, 0.807);
+
+}
+
+.modalExpense{
+    width: 100%;
+    justify-content: space-around;
+    align-items: flex-start; /* Align children to the start */
+    height: auto; /* Adjust height dynamically */
+    display: flex;
+    justify-content: space-evenly;
+   
+}
+
+
+.expenseInp{
+    text-align: center;
+    height: 40px;
+    margin: 10px;
+    width: 200px;
+    border: none;
+    border-radius:10px; 
+    box-shadow: 0px 2px 5px rgba(47, 46, 46, 0.807);
+
+}
+
+.transaction-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    background: white;
+    border-radius: 8px;
+    color: black;
+    margin-left: 10px;
+  }
+  
+  .transaction-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    height: 50px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .transaction-item .icon {
+    margin-right: 10px;
+  }
+  
+  .transaction-item .edit {
+    color: blue;
+    cursor: pointer;
+  }
+  
+  .transaction-item .delete {
+    color: red;
+    cursor: pointer;
+  }
+  
+  .transaction-item .title {
+    flex: 1;
+    font-size: 16px;
+  }
+  
+  .transaction-item .amount {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .transaction-details{
+   display: flex;
+   flex-direction: row;
+  
+  }
+  .transactions-contents{
+    display: flex;
+    flex-direction: column;
+
+  }
+  .expenseButtons{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .category-legend-container {
+    display: flex;
+    gap: 20px; /* Adds space between categories */
+    align-items: center;
+    margin-top: 15px;
+  }
+  
+  .category-item {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between text and box */
+  }
+  
+  .category-label {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .category-box {
+    width: 20px;  /* Adjust the width of the colored box */
+    height: 20px; /* Adjust the height of the colored box */
+    border-radius: 4px;
+  }
+
+  .chart-contents{
+    margin-top: 10px;
+    margin-left: 80px;
+    border-radius: 10px;
+    width: 500px;
+    height: 250px;
+    background-color: white;
+    color: black;
+  }
+
+  .floating-edit-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #ffbb28;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .floating-edit-btn:hover {
+    background-color: #ffa500;
+  }
+ 
+  @media (min-width: 950px) {
+
+    .topContainer-contents{
+      display: flex;
+      justify-content: space-between;
+    }
+    .cards{
+      margin-top: 10px;
+      width: 30%;
+    }
+    .chart-container{
+      width: 25%;
+      margin-right: 5%;
+    }
+  }
+  .category-item{
+    width: 50%;
+   
+  }
+  .bottomContainer-topExpenses{
+    margin-right: 2%;
+  }
+  .chart-contents{
+    width: 80%;
+    margin-right: 2%;
+  }
+
+  @media (max-width: 950px){
+
+
+    .top-container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+     
+    }
+    .topContainer-contents{
+      height: 100%;
+    }
+    .cards{
+      margin-top: 2%;
+    }
+
+    .chart-container{
+      margin-bottom: 2%;
+    }
+
+    .app{
+      height: 100%;
+    }
+    .bottom-container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .bottomContainer-transactions{
+      width: 90%;
+    }
+    .bottomContainer-topExpenses{
+      width: 90%;
+      margin-bottom: 5%;
+    }
+
+
+  }
